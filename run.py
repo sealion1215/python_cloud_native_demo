@@ -16,4 +16,4 @@ elif ddl is DDLMode.CREATE_DROP:
     db.session.commit()
 
 CORS(application)
-application.run(host='0.0.0.0', port=port_number)
+application.run(port=port_number)

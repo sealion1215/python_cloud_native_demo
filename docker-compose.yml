@@ -1,0 +1,24 @@
+version: '3'
+services:
+  web:
+    build: .
+    ports:
+      - 8080:8080
+    environment:
+      db_host: localhost
+      db_port: 3306
+      db_user: root
+      db_password: 1234567
+      db_schema: python_cloud_native_demo
+      ddl: CREATE
+      log_level: DEBUG
+      port_number: 8080
+  db:
+    image: mysql
+    ports: 
+      - 3306:3306
+    environment:
+      MYSQL_ROOT_PASSWORD: 1234567
+      MYSQL_DATABASE: python_cloud_native_demo
+      MYSQL_USER: test
+      MYSQL_PASSWORD: 1234567
