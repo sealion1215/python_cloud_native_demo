@@ -7,9 +7,9 @@ db_port = 3306
 db_user = 'root'
 db_password = '1234567'
 db_schema = 'python_cloud_native_demo'
-ddl = DDLMode.CREATE
+ddl = DDLMode.NONE
 log_level = logging.DEBUG
-port_number = 8080
+port_number = 8085
 
 if os.environ.get('docker_build', 'false') is 'true':
     db_host = os.environ.get('localhost', db_host)

@@ -16,7 +16,7 @@ services:
   db:
     image: mysql
     ports: 
-      - 3306:3306
+      - 3306:3307
     environment:
       MYSQL_ROOT_PASSWORD: 1234567
       MYSQL_DATABASE: python_cloud_native_demo
